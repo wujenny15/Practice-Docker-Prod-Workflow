@@ -19,3 +19,9 @@ Made changes to the src/APP.js files and update the changes without stop it, reb
 ```
 docker run -p 3000:3000 -v /app/node_modules -v $(pwd):/app a5395daf3b45092e8c6ed
 ```
+
+## Run Nginx
+```
+docker build .
+docker run -p 8080:80 5f1dc4492fb7391b99ae9d87
+```
