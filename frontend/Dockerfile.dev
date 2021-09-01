@@ -5,6 +5,9 @@ WORKDIR '/app'
 COPY package.json .
 RUN npm install
 
+# Do we need to keep line 9, we can comment this line because in the docker-compose.yml files, it is acturally 
+# reference the files in our local machine, we mgiht want to use this Dockerfile.dev only or might want to use this file for production file.
+# In either case, we need to use it again.
 COPY . .
 
 CMD ["npm", "run", "start"]
