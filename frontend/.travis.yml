@@ -1,0 +1,12 @@
+# Tells the travis we need to have sudo permission in order to have docker build
+sudo: required
+services: 
+  - docker 
+
+before_install:
+  - docker build -t docker-react -f Dockerfile.dev .
+
+# all the commands needed to run our test suite
+script:
+  - docker run -e CI=true docker-react npm run test
+
