@@ -13,5 +13,6 @@ FROM nginx
 # this port, compose it and utilize it
 EXPOSE 80
 
+
 # In second stage, we will copy the files from builder stage , and the folder we want to copu is /app/build
 COPY --from=builder /app/build /usr/share/nginx/html
